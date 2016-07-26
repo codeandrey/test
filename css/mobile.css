@@ -1,0 +1,111 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+.down_menu{
+	height: 360px;
+  width: 720px;
+  top:240px;
+}
+.menu_cat {
+  bottom: -103px;
+  clear: none;
+  position: relative;
+}
+.img_content {
+  height: 80px;
+  width: 80px;
+}
+.product_img {
+  margin-right: 10px;
+}
+.is_count {
+	width: 240px;
+}
+.properties {
+  font-size: 11px;
+  width: 240px;
+}
+input.css-checkbox[type="checkbox"] + label.css-label {
+	padding-left: 25px;
+}
+.owl-carousel {
+	max-width: 660px;
+}
+.form_search{
+  top:20px;
+}
+.help {
+	top :20px;
+}
+}
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+.lang > li > a {
+	padding: 5px;
+}
+.form_search{
+  float: none;
+  margin: auto;
+  width: 200px;
+}
+.form_search input{
+	width: 200px;
+
+}
+.fa-th-list:before{
+  display: block;
+   position: absolute;
+   right: 50px;
+}
+.tp_menu ul li{
+  display: none;
+}
+.adress {
+  display: none;
+}
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+
+
+.down_menu{
+	height: 530px;
+	width: 480px;
+}
+}
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
