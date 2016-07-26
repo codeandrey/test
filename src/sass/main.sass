@@ -1,0 +1,401 @@
+//@import ../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap
+@import ../../bower_components/normalize-scss/sass/_normalize
+//@import lib/base.scss
+//@import variables
+//@import "../../bower_components/font-awesome/scss/font-awesome.scss"
+@import ../../bower_components/susy/sass/_susy
+//@import ../../bower_components/slick-carousel/slick/slick.scss
+$susy: (math: fluid, columns:12, container: auto, gutters: 0.25, column-width: false, container-position: center, gutter-position: inside, global-box-sizing: border-box /*, debug: (image: show, color: rgba(#000, .15), output: background)*/);
+
+/* Variables */
+$header_bg_color: rgba(#ffffff, 1)
+$menu_bg_color: #ffffff
+$content_bg_color: rgba(#ff007f, 0.25)
+$btn_bg_color: rgba(#ffaa00, 1)
+$btn_df_color: rgba(#ffffff, 1)
+//$sb_bg_color: rgba(#dd5566, 0.25)
+//$slider_bg_color: rgba(#116688, 0.25)
+$ft_bg_color: rgba(#031f38, 0.25)
+
+$header_height: 90px
+$header_height_a: 40px
+$viewport_width: 1920
+
+@import _fonts.sass
+@include border-box-sizing;
+
+* 
+	font-family: "opensans", sans-serif
+	font-size: 14px
+	color: #959595
+
+/*@function get-vw($target) 
+  	$vw-context: ($viewport_width * 0.01) * 1px;
+  	@return ($target / $vw-context) * 1vw; */
+html, body 
+	height: 100%;
+
+body 
+	
+	margin: auto
+a, a:hover
+	text-decoration: none
+
+.container
+	@include container(1200px) 
+
+
+h1
+	font-size: 35px
+	font-family: "opensanslight"
+	margin-top: 100px
+	@media screen and (max-width: 1199px) 
+		text-align: center
+		margin-top: 25px
+h2
+	font-size: 30px
+	font-family: "opensanslight"	
+	margin: 0
+
+ul
+	margin: 0
+	padding: 0
+	li
+		list-style: none
+		float: left
+		margin: auto
+		@media screen and (max-width: 1199px)
+			float: none
+			
+p
+	font-size: 13px
+	font-family: "opensans"
+	color: #fff
+	line-height: 2em
+	max-width: 440px
+
+	
+article
+	color: #959595
+	font-size: 14px
+	font-family: "opensans"
+	margin: 10px 0
+strong
+	font-size: 14px
+	font-family: "opensansbold"
+	color: #fff	
+.header
+	background: url("../img/bg_header.png")  
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	height: 950px
+	margin: 0 auto
+	max-width: 1800px
+.header_left, .header_right 
+	width: 50%
+	float: left
+	@media screen and (max-width: 680px) 
+		width: 100%
+		
+.top_logo
+	margin-top: 60px
+	height: 40px
+	img
+		float: left
+	span
+		font-size: 21px
+		font-family: "opensans"
+		color: #fff
+		line-height: 40px
+		position: relative
+		margin-left: 10px
+	@media screen and (max-width: 1199px) 
+		margin: 60px
+.header_caption	
+	font-size: 21px	
+	font-family: "opensanslight"
+	color: #fff
+	margin-top: 350px
+	@media screen and (max-width: 1199px) 
+		text-align: center
+.header_text
+	max-width: 450px
+	@media screen and (max-width: 680px) 
+		text-align: center
+		margin: auto
+.img_tel
+	position: relative
+	top: 250px
+	z-index: 10
+	@media screen and (max-width: 1199px) 
+		display: none
+.content
+	min-height: 540px
+	background-color: #fff
+	li
+		max-width: 570px
+		margin: 15px
+		article
+			line-height: 2em
+		@media screen and (max-width: 1199px)
+			float: none
+			margin: auto
+		@media screen and (max-width: 640px)
+			padding: 15px
+			
+
+.pd_top
+	padding-top: 100px		
+	@media screen and (max-width: 1199px)
+		padding-top: 0
+
+#box
+	min-height: 560px
+	li
+		max-width: 400px
+		height: 280px
+		display: block
+		margin: auto
+		padding: 40px
+		position: relative
+		p, a
+			color: #fff
+			line-height: 2em
+			margin: 25px 0
+		a
+			bottom: 15px
+			vertical-align: bottom
+			position: absolute
+			font-family: "opensansbold"
+			font-size: 14px
+
+.icon-next
+	float: right
+	margin-left: 10px
+	top: 43%
+	position: absolute
+.icon-fa-heart-o
+	position: absolute
+	right: 45px
+	bottom: 40px
+.box_pink
+	background: #f5989d		
+.box_blue
+	background: #615f7d		
+.box_small
+	background: url("../img/photo1.jpg")		
+#box .box_large	
+	max-width: 800px
+	width: 100%
+	background: url("../img/photo2.jpg")
+	
+.box_green
+	background-color: #82ca9c	
+.details
+	min-height: 530px
+	li
+		width: 270px
+		margin-right: 30px
+		@media screen and (max-width: 1199px)
+			margin: auto
+		&:last-child
+			margin-right: 0
+			@media screen and (max-width: 1199px)
+				margin: auto
+		strong
+			color: #67676d
+		article
+			line-height: 2em
+
+.detalis_capton		
+	font-size: 35px
+	font-family: "opensanslight"
+	color: #222626
+	margin: 90px 0 60px
+	@media screen and (max-width: 1199px)
+		text-align: center
+.power
+	min-height: 870px
+	position: relative
+	background: url("../img/bg_photo.jpg")
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	margin: 0 auto
+	max-width: 1800px	
+	
+.power_wrap
+	position: absolute
+	top: 50%
+	margin: auto
+	a
+		position: relative
+		color: #fff
+		font-family: "opensansbold"
+		font-size: 14px
+	@media screen and (max-width: 1199px)
+		padding: 0 20px
+	@media screen and (max-width: 480px)
+		top: 25%
+.power_caption
+	font-size: 60px
+	color: #fff
+	font-family: "opensanslight"
+	@media screen and (max-width: 1199px)
+		text-align: center
+
+
+.reasons
+	min-height: 530px
+	background: #82ca9c
+	position: relative
+	li
+		max-width: 370px
+		margin-right: 30px
+		article
+			color: #fff
+			line-height: 2em
+		@media screen and (max-width: 1199px)
+			margin: auto
+			
+.reason_caption
+	font-size: 35px
+	font-family: "opensanslight"
+	color: #fff
+	padding: 120px 0 60px
+	@media screen and (max-width: 1199px)
+		text-align: center
+		padding: 30px 0
+
+.buying
+	background: #f6f7fa
+	min-height: 630px
+	li
+		max-width: 570px
+		min-height: 380px
+		margin: 130px auto 80px
+		padding: 45px 55px
+		position: relative
+		@media screen and (max-width: 1199px)
+			margin: 15px auto
+		@media screen and (max-width: 640px)	
+			min-height: 420px
+			margin: 15px 
+			
+		.btn
+			background: #e1e1e1
+			padding: 7px 16px
+			border-radius: 7px
+			text-transform: uppercase
+			color: #fff
+		&.active
+			box-shadow: 0px 0px 50px -5px #000
+			background: #fff
+			.btn
+				background: #bd8cbf
+		
+			
+		article
+			color: #8297a7
+			line-height: 2em
+			margin: 0
+
+.buy_caption
+	color: #2e3b4e
+	font-size: 30px
+	margin: 15px 0
+.btn_buy
+	margin: 15px 0
+	background: #77c1ab
+	padding: 10px 25px
+	position: absolute
+	text-transform: uppercase
+	color: #fff
+	border-radius: 3px
+.icon-fa-apple, .icon-fa-windows
+	position: absolute
+	bottom: 60px
+	left: 60px
+	@media screen and (max-width: 640px)
+		bottom: 20px
+	@media screen and (max-width: 360px)
+		position: relative
+    		float: left
+   		left: 170px
+    		top: 55px
+
+.icon-fa-windows
+	left: 100px
+	@media screen and (max-width: 360px)
+   		left: 190px
+    		
+.footer
+	background: #192431
+	min-height: 600px
+	
+.footer_left, .footer_right
+	@extend .header_left
+	padding: 100px 0 50px
+	p
+		line-height: 2em
+		@media screen and (max-width: 1199px)
+			margin: auto
+	@media screen and (max-width: 1199px)
+		width: 100%
+		text-align: center
+		padding: 50px 0 25px
+.ft_link		
+	height: 100%
+	display: inline-block
+.footer li
+	width: 200px
+	li
+		float: none
+		margin: 5px 0
+		color: #f6f7fa
+		&:first-child	
+			margin: 20px 0
+	@media screen and (max-width: 1199px)
+		float: left
+	@media screen and (max-width: 640px)
+		float: none
+			
+.form_email			
+	float: right
+	max-width: 470px
+	position: relative
+	margin: auto
+	@media screen and (max-width: 1199px)
+
+		float: none
+	@media screen and (max-width: 640px)
+		margin: 20px
+	p
+		color: #57697f
+		line-height: 1.4em
+input
+	width: 100%
+	height: 60px
+	border-radius: 3px
+	margin-top: 20px
+	
+
+
+.btn_send
+	height: 60px
+	width: 60px
+	display: block
+	background: #82ca9c
+	position: absolute
+	right: 0
+	top: 40px
+	&:hover
+		background: #82ca9c
+.icon-check
+	position: absolute
+	top: 20px
+	left: 20px
+
+
+	
